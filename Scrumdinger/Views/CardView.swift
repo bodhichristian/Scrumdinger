@@ -35,6 +35,9 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(scrum: scrum)
             .background(scrum.theme.mainColor)
+        
+            // displays smaller preview window when 'Selectable' is chosen on the canvas
+            // does NOT work in 'Live'
             .previewLayout(.fixed(width: 400, height: 60))
     }
 }
