@@ -28,6 +28,7 @@
 		AAD98F2F2967654800954C6F /* AVPlayer-Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD98F2E2967654800954C6F /* AVPlayer-Ding.swift */; };
 		AAD98F31296A001D00954C6F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD98F30296A001D00954C6F /* History.swift */; };
 		AAD98F33296A5C8A00954C6F /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD98F32296A5C8A00954C6F /* ScrumStore.swift */; };
+		AAD98F37296A733300954C6F /* ScrumsListSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD98F36296A733300954C6F /* ScrumsListSeparator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		AAD98F2E2967654800954C6F /* AVPlayer-Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer-Ding.swift"; sourceTree = "<group>"; };
 		AAD98F30296A001D00954C6F /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		AAD98F32296A5C8A00954C6F /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
+		AAD98F36296A733300954C6F /* ScrumsListSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsListSeparator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				AA3A0AB62964F82E0078BBF3 /* Theme.swift */,
 				AA3A0ABE2964FF3C0078BBF3 /* TrailingIconLabelStyle.swift */,
 				AAD98F242967576300954C6F /* ScrumProgressViewStyle.swift */,
+				AAD98F36296A733300954C6F /* ScrumsListSeparator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				AA69164F2964F26E000D2CD6 /* MeetingView.swift in Sources */,
 				AA69164D2964F26E000D2CD6 /* ScrumdingerApp.swift in Sources */,
 				AAD98F1E29671BFA00954C6F /* ThemeView.swift in Sources */,
+				AAD98F37296A733300954C6F /* ScrumsListSeparator.swift in Sources */,
 				AA3A0ABC2964FC9D0078BBF3 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
