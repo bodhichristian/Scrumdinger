@@ -17,6 +17,22 @@ class ScrumStore: ObservableObject {
                                     create: false)
             .appendingPathComponent("scrums.data")
     }
+    static func load() async throws -> [DailyScrum] {
+        // suspends the load function, then passes a continuation into the closure
+        // a continuation is a vlaue that represents the code after an awaited function
+        try await withCheckedThrowingContinuation { continuation in
+            load { result in
+                switch result {
+                    // on failure, send error to continuation closure
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                    // on success, send scrums to continuation closure
+                case .success(let scrums):
+                    continuation.resume(returning: scrums)
+                }
+            }
+        }
+    }
     
     static func load(completion: @escaping (Result<[DailyScrum], Error>) -> Void) {
         DispatchQueue.global(qos: .background).async {
@@ -35,6 +51,22 @@ class ScrumStore: ObservableObject {
             } catch {
                 DispatchQueue.main.async {
                     completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    // the save function returns a value that may not be used by the function caller
+    // @discardableResult disables warnings about unused return values
+    @discardableResult
+    static func save(scrums: [DailyScrum]) async throws -> Int {
+        try await withCheckedThrowingContinuation { continuation in
+            save(scrums: scrums) { result in
+                switch result {
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                case .success(let scrumsSaved):
+                    continuation.resume(returning: scrumsSaved)
                 }
             }
         }
